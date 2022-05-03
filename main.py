@@ -59,6 +59,11 @@ while(True):
     if(inp == "w"):
         coord[0] -= 1
 
+    if(inp == "j"):
+        coord[1] += 1
+    if(inp == "l"):
+        coord[1] -= 1
+
     t.clear()
 
     h = 0
