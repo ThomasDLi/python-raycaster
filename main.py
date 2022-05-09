@@ -4,7 +4,7 @@ import math
 t = turtle.Turtle()
 t.right(90)
 t.speed(0)
-t.pensize(50)
+t.pensize(5)
 walls = [
     ((1, 1), (1, 5)),
     ((2, 2), (5, 5))
@@ -94,9 +94,9 @@ while(True):
 
         dist = math.sqrt((coord[0] - lineint[0])**2 + (coord[1] - lineint[1])**2)
 
-        display[x] = dist
+        display[x] = 100 - dist * 10
 
-        if(lineint != None and display[x] > 10):
+        if(lineint != None and display[x] < 0):
             t.penup()
             t.goto(x * 3, display[x] / 2)
             t.pendown()
